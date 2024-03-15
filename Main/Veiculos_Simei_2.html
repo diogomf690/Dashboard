@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="icon" href="JustLogo.png">
+    <meta charset="UTF-8">
+    <title>Principal</title>
+    <link rel="stylesheet" href="Main.css">
+
+</head>
+    <body style="background-color: #151523;"></body>
+    <div class="sidebar">
+        <h1>Dashboard</h1>
+        <a href="#">Veículos e Estatísticas</a>
+    </div>
+    <div class="content-panel">
+        <h1>Painel De Controlo de Estacionamento</h1>
+        <h2>Veiculos das ultimas 24H:</h2>
+        <ul class="vehicle-list">
+            <li class="vehicle-item">Matricula: AB-12-AC | Hora de Entrada: 10:15 AM</li>
+            <li class="vehicle-item">Matricula: AB-12-AC | Hora de Entrada: 11:30 AM</li>
+            <li class="vehicle-item">Matricula: AB-12-AC | Hora de Entrada: 11:30 AM</li>
+            <li class="vehicle-item">Matricula: AB-12-AC | Hora de Entrada: 11:30 AM</li>           
+        </ul>
+        <canvas id="meuGrafico"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        var ctx = document.getElementById('meuGrafico').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["2:00","4:00","6:00","8:00","10:00","12:00","14:00","16:00","18:00","20:00","22:00","00:00"],
+                datasets: [{
+                    label: 'Veículos',
+                    data: [12, 19, 3, 5, 2],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: false, // Desabilita a responsividade
+                maintainAspectRatio: true, // Permite que o tamanho seja ajustado
+                aspectRatio: 1, // Define a proporção desejada
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+    <link rel="icon" href="JustLogo.png">
+    <head>
+        <meta charset="UTF_8">
+        <meta http-equiv="X_UA_Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device_width, initial_scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Login</title>
+    </head>
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+        </script>
+            <div class="main_login">
+                <div class="left_login">
+                    <h1>Bem vindo<h1>
+                        <br>
+                    <img src="logo.png" class="left_login_image" alt="Imagem animada">
+                </div>
+
+                <div class="right_login">
+                    <div class="card_login">
+                        <h1>LOGIN</h1>
+                        <div class="textfield">
+                            <label for="email">User</label>
+                            <input type="text" name="email" placeholder="email">
+                        </div>
+                        <div class="textfield">
+                            <label for="Password">Password</label>
+                            <input type="password" name="Password" placeholder="Password">
+                        </div>
+                        <button class="btn_login">Login</button>
+                        <div class="btn_plus">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>
